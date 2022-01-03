@@ -7,6 +7,17 @@ const greet = () => {
   return name;
 };
 
+export const rounds = 3;
+export const getRandomInt = (max) => Math.floor(Math.random() * max);
+
 export const askQuestion = (questionText) => readlineSync.question(`${questionText} `);
 
+export const compareResults = (response, result, successText, failText) => {
+  if (response === result) {
+    console.log(successText);
+    return true;
+  }
+  console.log(failText);
+  return false;
+};
 export default greet;
