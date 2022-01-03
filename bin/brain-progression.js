@@ -21,7 +21,7 @@ while (answerCounter < rounds) {
   const correctResponse = arr[hiddenElementIndex];
   arr[hiddenElementIndex] = '..';
   console.log(`Question: ${arr}`);
-  const response = askQuestion('Your answer:');
+  const response = Number(askQuestion('Your answer:'));
   const isAnswerCorrect = compareResults(response, correctResponse, 'Correct!', `'${response}' is wrong answer ;(. Correct answer was '${correctResponse}'.`);
   if (!isAnswerCorrect) {
     answerCounter += 3;

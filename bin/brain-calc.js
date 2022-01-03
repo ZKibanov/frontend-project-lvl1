@@ -28,7 +28,7 @@ while (answerCounter < rounds) {
   const operand = operands[getRandomInt(2)];
 
   console.log(`Question: ${number} ${operand} ${number2}`);
-  const response = askQuestion('Your answer:');
+  const response = Number(askQuestion('Your answer:'));
   const correctResponse = calc(operand, number, number2);
   const isAnswerCorrect = compareResults(Number(response), correctResponse, 'Correct!', `'${response}' is wrong answer ;(. Correct answer was '${correctResponse}'.`);
   if (!isAnswerCorrect) {

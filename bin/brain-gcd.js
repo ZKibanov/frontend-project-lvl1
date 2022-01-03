@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import greet, {
-  askQuestion, compareResults, getRandomInt, rounds,
+  askQuestion, compareResults, getRandomInt, rounds, getDividers,
 } from '../src/cli.js';
 
 const name = greet();
@@ -9,12 +9,8 @@ console.log('Find the greatest common divisor of given numbers.');
 let answerCounter = 0;
 const findNOD = (num1, num2) => {
   const findNumsD = (num) => {
-    const result = [num];
-    for (let i = Math.round(num / 2); i > 1; i -= 1) {
-      if (num % i === 0) {
-        result.push(i);
-      }
-    }
+    const result = getDividers(num);
+    result.unshift(num);
     result.push(1);
     return result;
   };
@@ -31,7 +27,7 @@ while (answerCounter < rounds) {
   const number = getRandomInt(100);
   const number2 = getRandomInt(100);
   console.log(`Question: ${number} ${number2}`);
-  const response = askQuestion('Your answer:');
+  const response = Number(askQuestion('Your answer:'));
   const correctResponse = findNOD(number, number2);
   const isAnswerCorrect = compareResults(response, correctResponse, 'Correct!', `'${response}' is wrong answer ;(. Correct answer was '${correctResponse}'.`);
   if (!isAnswerCorrect) {

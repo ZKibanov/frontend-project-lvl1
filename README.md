@@ -14,3 +14,5 @@ Brain gcd game:
 
 Brain progression game:
 [![asciicast](https://asciinema.org/a/Dy3jmT1abIn4Klk6N35iPthFS.svg)](https://asciinema.org/a/Dy3jmT1abIn4Klk6N35iPthFS)
+
+[![asciicast](https://asciinema.org/a/xTkbAXJPTZVOmx1lvxAdWUykJ.svg)](https://asciinema.org/a/xTkbAXJPTZVOmx1lvxAdWUykJ)
