@@ -8,9 +8,9 @@ const greet = () => {
 };
 
 export const rounds = 3;
-export const getRandomInt = (max) => Math.floor(Math.random() * max);
+export const getRandomInt = (max) => Math.floor(Math.random() * max + 1);
 
-export const askQuestion = (questionText) => readlineSync.question(`${questionText} `);
+export const askQuestion = (questionText) => Number(readlineSync.question(`${questionText} `));
 
 export const compareResults = (response, result, successText, failText) => {
   if (response === result) {
